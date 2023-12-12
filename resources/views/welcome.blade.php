@@ -15,7 +15,7 @@
          id="result">0
     </div>
     <div class="w-full py-5 px-6 text-2xl text-white bg-gray-900 font-thin border-b row-start-1 row-end-3 rounded-r-2xl">
-            <span class="border-b pb-4 w-full block">History</span>
+            <a class="border-b pb-4 w-full block" href="{{url('/history')}}" id="view ">View History</a>
             <div class="pt-4 flex flex-col h-80 flex justify-between" id="history">
                 @if(!empty($results) && sizeof($results) > 0)
                     <ol id="historyList" class="overflow-auto">
