@@ -9,9 +9,9 @@ class ResultsHistory extends Controller
 {
     public function show()
     {
-        $results =  $results = Results::all();;
+        $results = Results::all();
 
-        return view('welcome', ['results' => $results]);
+        return view('welcome', ['results' => $results ,'test' => 'test']);
     }
 
     public function delete()

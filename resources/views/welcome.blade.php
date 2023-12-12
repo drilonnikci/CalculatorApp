@@ -18,7 +18,7 @@
             <span class="border-b pb-4 w-full block">History</span>
             <div class="pt-4 flex flex-col h-80 flex justify-between" id="history">
                 @if(!empty($results) && sizeof($results) > 0)
-                    <ol id="historyList">
+                    <ol id="historyList" class="overflow-auto">
                         @foreach($results as $result)
                             <li class="text-base leading-5">{{ $result->expression_result }}</li>
                         @endforeach
