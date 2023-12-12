@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CalculatorController;
+use App\Http\Controllers\ResultsHistory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/calculate', [CalculatorController::class, 'calculate']);
+
+Route::get('/history', [ResultsHistory::class, 'show']);
+Route::delete('/history/delete', [ResultsHistory::class, 'delete']);
